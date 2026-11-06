@@ -119,9 +119,10 @@
 }
 
 /* The shell controls the body-slot surface. Body components own their
-   internal content styling. */
+   internal content styling, including any overflow clipping they need:
+   clipping here would cut off overlays that deliberately extend above the
+   body, such as the edit composer's autocomplete popup. */
 .slotBody > * {
-    overflow-y: hidden;
     text-align: start;
 }
 
